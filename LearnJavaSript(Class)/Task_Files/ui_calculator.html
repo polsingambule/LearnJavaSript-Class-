@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+<style>
+body {
+    background: linear-gradient(to bottom, #ffffff 0%, #99ff99 100%);
+    height:100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    overflow: hidden;
+    font-family: cursive;
+}
+
+.conteneur {
+    height: 10rem;
+    width: 17rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:0 auto;
+}
+
+
+button {
+    padding: 20px;
+    border-radius: 25px;
+    outline: none;
+    border: 2px solid indianred;
+    margin: 2px;
+    font-size: 20px;
+    font-family: cursive;
+    background: linear-gradient(to bottom, #ffffff 0%, #00ff00 100%);
+}
+button:hover{
+    cursor: pointer;
+    transition:1s;
+    background: #fff;
+}
+
+.difre_btn {
+    padding: 0px 13px;
+    background: linear-gradient(to bottom, #ffffff 0%, #ff00ff 100%);
+    border: 2px solid indianred;
+}
+.equa_btn {
+    width: 7.5rem;
+    background: linear-gradient(to bottom, #ffffcc 0%, #ffff66 100%);
+}
+.mark_btn{
+    background: linear-gradient(to bottom, #33ccff 0%, #00ffff 100%);
+}
+#output {
+    margin: 10px auto;
+    width: 220px;
+    border: 1px solid #000;
+    background: linear-gradient(to bottom, #99ffcc 0%, #66ffff 100%);
+    color: #000;
+    text-align: right;
+    padding: 0px 10px;
+    height: 50px;
+    font-size: 35px;
+    font-family: cursive;
+    border-radius:10px;
+}
+</style>
+</head>
+<body>
+   <h1 style="text-align: center; margin-top: 50px;">Calculator</h1>
+    <div id="output">0</div>
+    <div class="conteneur">
+        <button class="difre_btn" onclick='reset()'>AC</button>
+        <button class="difre_btn" onclick='rem1()'>CE</button>
+        <button class="mark_btn" valeu='%' onclick='showValue(this)'>%</button>
+
+        <button class="mark_btn" value='/' onclick='showValue(this)'>/</button>
+        <button value='7' onclick='showValue(this)'>7</button>
+        <button value='8' onclick='showValue(this)'>8</button>
+
+        <button value='9' onclick='showValue(this)'>9</button>
+        <button class="mark_btn" value='*' onclick='showValue(this)'>*</button>
+        <button value='4' onclick='showValue(this)'>4</button>
+
+        <button value='5' onclick='showValue(this)'>5</button>
+        <button value='6' onclick='showValue(this)'>6</button>
+        <button class="mark_btn" value='-' onclick='showValue(this)'>-</button>
+
+        <button value='1' onclick='showValue(this)'>1</button>
+        <button value='2' onclick='showValue(this)'>2</button>
+        <button value='3' onclick='showValue(this)'>3</button>
+
+        <button class="mark_btn" value='+' onclick='showValue(this)'>+</button>
+        <button value='0' onclick='showValue(this)'>0</button>
+        <button value='.' onclick='showValue(this)'>.</button>
+        <button class="equa_btn" onclick='doMath()'>=</button>
+
+    </div>
+
+<script>
+    let input = "";
+
+    function showValue(btn) {
+        input += btn.value;
+        document.getElementById('output').innerHTML = input;
+    }
+
+    function doMath(){
+        document.getElementById('output').innerHTML = eval(input)
+        input ="";
+    }
+
+    function reset(){
+        document.getElementById('output').innerHTML = "0";
+        input="";
+    }
+
+    function rem1(){
+        input = input.replace(/.$/, "");
+        document.getElementById('output').innerHTML = input;
+    }
+</script>
+</body>
+</html>

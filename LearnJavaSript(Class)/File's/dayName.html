@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    Enter the Day number to get the String day name.<br><br>
+    Day in number: <input type="text" name="dayInNumber" id="dayInNumber"><br><br>
+    Day in String: <input type="text" name="dayInString" id="dayInString"><br><br>
+    <input  type="button" value="cal" onclick="calculateStringDayName();"/>
+
+
+    <script>
+        function calculateStringDayName(){
+            const daysInString = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
+            let DayInNum = document.getElementById("dayInNumber").value;
+            let day = parseInt(DayInNum);
+            switch(day){
+            	
+                case 1:
+                    document.getElementById("dayInString").value = daysInString[day -1];
+                    break;
+                case 2:
+                    document.getElementById("dayInString").value = "Monday";
+                    break;
+                case 3:
+                    document.getElementById("dayInString").value = "Tuesday";
+                    break;
+                case 4:
+                    document.getElementById("dayInString").value = "Wednesday";
+                    break;
+                case 5:
+                    document.getElementById("dayInString").value = "Thursday";
+                    break;
+                case 6:
+                    document.getElementById("dayInString").value = "Friday";
+                    break;
+                case 7:
+                    document.getElementById("dayInString").value = "Saturday";
+                    break;
+                default:
+                document.getElementById("dayInString").value = "invalid input";
+                    console.log("invalid input");
+
+            }
+        }
+    
+    </script>
+</body>
+</html>

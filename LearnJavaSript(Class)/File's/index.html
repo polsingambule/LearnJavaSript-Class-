@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        #signInContainer{
+            background-color: antiquewhite;
+            border: 1px solid gray;
+            align-items: baseline;
+            width: 40%;
+        }
+        #lableContainer{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 39%;
+        }
+
+        .formController{
+            margin-left: 25%;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function onClick(){
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            if(username === "ravi" && password === "more"){
+                alert("login sucesfully.");
+            }else{
+                alert("Username or password is not correct.");
+            }
+            //alert(username + " " + password);
+            
+        }
+    </script>
+</head>
+<body>
+    <form>
+       <div id="signInContainer">
+            <div id="lableContainer"><label>Sign In</label></div>
+            <div id="usernameContainer" class="formController">Username: <input type="text" name="username" id="username" /> </div>
+            <div id="passwordContainer" class="formController"> password: <input type="password" name="password" id="password" /></div>
+            <div id="submitContainer" class="formController"><input type="submit" name="submit" id="submit" onclick="onClick();"/></div>  
+       </div>
+    </form>
+</body>
+</html>

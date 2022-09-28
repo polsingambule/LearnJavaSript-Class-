@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript-Task</title>
+</head>
+<body>
+<!-- Length HTML  > -->
+
+<p id="output"></p>
+<input type="text" id="input"> 
+<button onclick='getLength()'>Click Me</button>  
+
+<!-- Length HTML  < -->
+
+<br><br><br><br><br>
+
+<!-- Email Validation HTML > -->
+<h4 id="output2"></h4>
+<input type='text' id='txtEmail'/>
+<input type='submit' name='submit' onclick='Javascript:checkEmail();'/>
+
+<!-- Email Validation HTML < -->
+
+<!-- Script Code > -->
+<script>
+	function getLength()
+						{
+						    var element = document.getElementById('input');
+						    var length = element.value.length;
+
+						    document.getElementById("output").innerHTML = length;
+						}
+</script>
+<!-- ************************************************************************* -->
+
+<script>
+
+function checkEmail() {
+
+    var email = document.getElementById('txtEmail');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test(email.value)) {
+    document.getElementById("output2").innerHTML = ("Barabar Email Id Dal");
+    email.focus;
+ }
+}
+</script>
+ 
+<!-- Script Code < -->
+</body>
+</html>

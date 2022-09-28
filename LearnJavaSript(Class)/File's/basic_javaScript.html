@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h1>Practice</h1>
+
+
+<script>
+//let, const, var
+function name(){}
+//const objs = {key: value} 
+// array
+let names = ['polsing', 'ambule'];
+var x = 10;
+
+//document.writeln("Hello");
+// Consol.log()
+//operator
+// loop - for, while, do-while
+// swicth , if, if-else, if- if - else
+
+/*
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+for(let count = 0; count  < 5 ; count ++){// col
+    for(let row = 0; row  < 5 ; row ++){ // row
+        document.writeln("*");
+    }
+    document.writeln("<br>");
+}
+
+*/
+
+/*
+*
+* *
+* * *
+*  * * *
+* * * * * == 5 * 5
+*/
+
+for(let count = 0; count  < 5 ; count ++){// col
+    for(let row = 0; row  <= count ; row ++){ // row
+        document.writeln("*");
+    }
+    document.writeln("<br>");
+}
+document.writeln("<br>");
+for(let count = 0; count  < 5 ; count ++){// col
+    for(let row = 5; row  > count ; row --){ // row :: 5 > 1 => True
+        document.writeln("R");
+    }
+    document.writeln("<br>");
+}
+
+let c = ['a', 'b', 'c']; //array char
+name="ravindra"; // ardnivar
+document.writeln(name.length + "<br>");
+for(let a = name.length -1; a >= 0; a--){  // a= 6, 0 >= 0;  6;
+    document.writeln(name[a]);
+}
+document.writeln("<br>");
+
+const numbers1 = [3, 4, 1, 6, 9 , 5]; // even num % 2 = 0
+
+for(let i = 0; i < numbers1.length; i++){
+    if(numbers1[i] % 2 === 0){
+        document.writeln(numbers1[i]);
+    }
+}
+document.writeln("<br>");
+const numbers2 = [3, 4, 1, 6, 9 , 5]; // odd num % 2 = 0
+
+for(let i = 0; i < numbers2.length; i++){
+    if(numbers2[i] % 2 !== 0){
+        document.writeln(numbers2[i]);
+    }else{
+        
+    }
+}
+//ardnivar- 0-7 -8
+
+</script>
+</body>
+</html>
+
+
+

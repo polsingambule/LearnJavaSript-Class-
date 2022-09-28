@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <body>
+        <div>
+            <div class="outputWrpr">
+                <p  style="display: inline;">The Result is:</p>
+                <span id="outputValue"></span>
+            </div>
+            
+            <br>
+    
+                <label>Input Value</label>
+                <input type="text" name="value_one" id="value_one" placeholder="No.1" /> 
+                <br><br>
+    
+                <label>Input Value</label>
+                <input type="text" name="value_two" id="value_two" placeholder="No.2" />
+                <br><br>
+    
+                <button type="text" name="sum" id="sum" onclick="sum();">Sum</button>
+                <button type="text" name="sub" id="sub" onclick="sub();">Sub</button>
+                <button type="text" name="mul" id="mul" onclick="mul();">Mul</button>
+                <button type="text" name="div" id="div" onclick="div();">Div</button>
+        </div>
+    
+        <script>
+        
+            function sum(){
+                let value_one = parseInt(document.getElementById("value_one").value);
+                let value_two = parseInt(document.getElementById("value_two").value);
+        
+        
+                const res = value_one + value_two;
+                document.getElementById("outputValue").innerText=res;
+            }
+        
+            function sub(){
+                let value_one = parseInt(document.getElementById("value_one").value);
+                let value_two = parseInt(document.getElementById("value_two").value);
+        
+        
+                const res = value_one - value_two;
+                document.getElementById("outputValue").innerText=res;
+            }
+        
+            function mul(){
+                let value_one = parseInt(document.getElementById("value_one").value);
+                let value_two = parseInt(document.getElementById("value_two").value);
+        
+        
+                const res = value_one * value_two;
+                document.getElementById("outputValue").innerText=res;
+            }
+        
+            function div(){
+                let value_one = parseInt(document.getElementById("value_one").value);
+                let value_two = parseInt(document.getElementById("value_two").value);
+        
+        
+                const res = value_one / value_two;
+                document.getElementById("outputValue").innerText=res;
+            }
+            
+        </script>
+    </body>
+</body>
+</html>

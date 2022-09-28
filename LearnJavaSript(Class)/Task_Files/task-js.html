@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript-Task</title>
+</head>
+<body>
+<!-- Length HTML  > -->
+
+<p id="output"></p>
+<input type="text" id="input"> 
+<button onclick='getLength()'>Click Me</button>  
+
+<!-- Length HTML  < -->
+
+<br><br><br><br>
+
+<!-- Email Validation HTML > -->
+<h4 id="output2"></h4>
+<input type='text' id='txtEmail'/>
+<input type='submit' name='submit' onclick='Javascript:checkEmail();'/>
+
+<!-- Email Validation HTML < -->
+<br><br><br><br>
+<!-- Number Month  HTML > -->
+
+	<label>Input Box Enter The No:-</label>
+    	<input type="text" name="monthInNumber" id="monthInNumber"><br><br>
+
+    <label>Output Box:-</label>
+    	<input type="text" name="monthInString" id="monthInString"><br><br>
+
+    <input  type="button" value="Check It" onclick="calculateMonth();"/><br><br>
+
+
+<!-- Number Month  HTML < -->
+<br><br><br><br>
+
+	<label>Number:-</label>
+        <select>
+            <script>
+                 for(let p = 1; p < 101 ; p ++){
+                     document.write("<option>"+ p +"</option>");
+
+                 }
+            </script>
+        </select>
+
+<!-- Script Code > -->
+<script>
+	function getLength()
+						{
+						    var element = document.getElementById('input');
+						    var length = element.value.length;
+
+						    document.getElementById("output").innerHTML = length;
+						}
+</script>
+<!-- ************************************************************************* -->
+
+<script>
+function checkEmail() {
+    var email = document.getElementById('txtEmail');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test(email.value)) {
+     	document.getElementById("output2").innerHTML = ("Barabar Email Id Dal");
+         email.focus;
+ 	}
+}
+</script>
+ 
+
+
+ <script>
+        function calculateMonth(){
+            const monthInString = ["January","February", "March", "April", "May", "June", "July","August", "September","October","November","December" ];
+            let monthInNum = document.getElementById("monthInNumber").value;
+            let month = parseInt(monthInNum);
+            
+            switch(month){
+                 case 0:
+                     document.getElementById("monthInString").value = monthInString[month -1];
+                     break;
+                   case 1:
+                      document.getElementById("monthInString").value = "January";
+                      break;
+                case 2:
+                    document.getElementById("monthInString").value = "February";
+                    break;
+                case 3:
+                    document.getElementById("monthInString").value = "March";
+                    break;
+                case 4:
+                    document.getElementById("monthInString").value = "April";
+                    break;
+                case 5:
+                    document.getElementById("monthInString").value = "May";
+                    break;
+                case 6:
+                    document.getElementById("monthInString").value = "June";
+                    break;
+                case 7:
+                    document.getElementById("monthInString").value = "July";
+                    break;
+                case 8:
+                    document.getElementById("monthInString").value = "August";
+                    break;
+                case 9:
+                    document.getElementById("monthInString").value = "September";
+                    break;
+                case 10:
+                    document.getElementById("monthInString").value = "October";
+                    break;
+                case 11:
+                    document.getElementById("monthInString").value = "November";
+                    break;
+                case 12:
+                    document.getElementById("monthInString").value = "December";
+                    break;
+                default:
+                document.getElementById("monthInString").value = "Number Is Wrong";
+            }
+        }
+    
+    </script>
+<script>
+	var a = 1;
+                while(a <= 10){
+                	document.write("prempatle</br>");
+                	a = a+1;
+                }
+</script>
+
+<!-- Script Code < -->
+</body>
+</html>
